@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Zingo</title>
+	<style type="text/css">
+		* {
+box-sizing: border-box;
+}
+
+*:focus {
+	outline: none;
+}
+ 
+h1 { color: black; font-family: 'Helvetica Neue', sans-serif; font-size: 72px; font-weight: bold; letter-spacing: -1px; line-height: 1; text-align: center; }
+
+
+body {
+font-family: Arial;
+background-color:  ;
+padding: 50px;
+}
+.login {
+margin: 20px auto;
+width: 300px;
+color: black;
+}
+.login-screen {
+background-color: #2980B9;
+padding: 20px;
+border-radius: 5px
+}
+
+.app-title {
+text-align: center;
+color: black;
+}
+
+.login-form {
+text-align: center;
+}
+.control-group {
+margin-bottom: 10px;
+}
+
+input {
+text-align: center;
+background-color: black;
+border: 2px solid transparent;
+border-radius: 3px;
+font-size: 16px;
+font-weight: 200;
+padding: 10px 0;
+width: 250px;
+transition: border .5s;
+}
+
+input:focus {
+border: 2px solid #3498DB;
+box-shadow: none;
+}
+
+.btn {
+  border: 2px solid transparent;
+  background: green ;
+  color: black;
+  font-size: 16px;
+  line-height: 25px;
+  padding: 10px 0;
+  text-decoration: none;
+  text-shadow: none;
+  border-radius: 3px;
+  box-shadow: none;
+  transition: 0.25s;
+  display: block;
+  width: 250px;
+  margin: 0 auto;
+}
+
+.btn:hover {
+  background-color: white ;
+}
+
+input {
+	    background: grey;
+    outline: black;
+}
+
+.login-link {
+  font-size: 12px;
+  color: black;
+  display: block;
+	margin-top: 12px;
+}
+.img-attri
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+	</style>
+}
+</head>
+<body>
+	<img src="https://image3.mouthshut.com/images/imagesp/925004542s.jpg" height="100px" width="150px" class="img-attri">
+	<div class="login">
+  <div class="login-screen">
+			<div class="app-title">
+				<h1>Zingo</h1>
+        <h3>Admin Login</h3>
+			</div>
+            
+
+<form action="/login" method="POST">
+			<div class="login-form">
+				<div class="control-group">
+				<input type="text" class="login-field" value="" placeholder="username" id="login-name">
+				<label class="login-field-icon fui-user" for="login-name"></label>
+				</div>
+
+				<div class="control-group">
+				<input type="password" class="login-field" value="" placeholder="password" id="login-pass">
+				<label class="login-field-icon fui-lock" for="login-pass"></label>
+				</div>
+
+				<a class="btn btn-primary btn-large btn-block" href="/dashboard">Login</a>
+
+</div>				
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+

@@ -1,0 +1,302 @@
+<style type="text/css">
+	
+
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+
+.btn-attributes {
+  background-color: #DDEBB8; /* Green */
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  position: absolute;
+  right: 30px;
+  top: 10px;
+}
+.header
+{
+	position: absolute;
+	top:0px;
+	left:170px;
+    font-family: Arial;
+	font-size: 40px;
+
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+</style>
+
+<html>
+  <head>
+
+
+
+ 
+
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+       google.charts.setOnLoadCallback(drawChart2);
+       google.charts.setOnLoadCallback(drawChart3);
+       google.charts.setOnLoadCallback(drawChart4);
+
+
+      function drawChart() {
+        let data = google.visualization.arrayToDataTable([
+          ['Distributor', 'Units Returned'],
+          ['Distributor 1',     11],
+          ['Distributor 2 ',      4],
+          ['Distributor 3',  2],
+          ['Distributor 4', 2],
+          ['Distributor 5',    7]
+        ]);
+
+        let options = {
+          title: 'Return analysis distributor wise '
+        };
+
+        //console.log(Object.keys(google.visualization))
+        let chart = new google.visualization.ColumnChart(document.getElementById('colchart'));
+
+        chart.draw(data, options);
+      }
+
+      function drawChart4() {
+        let data = google.visualization.arrayToDataTable([
+          ['Distributor', 'Units Purchased'],
+         ['Distributor 1',     400],
+          ['Distributor 2 ',      467],
+          ['Distributor 3',  340],
+          ['Distributor 4', 800],
+          ['Distributor 5',    250]
+        ]);
+
+        let options = {
+          title: 'Return analysis distributor'
+        };
+
+        //console.log(Object.keys(google.visualization))
+        let chart = new google.visualization.ColumnChart(document.getElementById('colchart2'));
+
+        chart.draw(data, options);
+      }
+
+
+      function drawChart2() {
+        let data = google.visualization.arrayToDataTable([
+          ['Product', 'Return'],
+          ['Head & Shoulders',     31],
+          ['Knorr Soup',      2],
+          ['Kissan Jam',  12],
+          ['Lifebuoy', 22],
+          ['Axe',    17]
+        ]);
+
+        let options = {
+          title: 'Returned Products'
+        };
+
+        //console.log(Object.keys(google.visualization))
+        let chart = new google.visualization.ComboChart(document.getElementById('combochart'));
+
+        chart.draw(data, options);
+      }
+     
+
+     function drawChart3() {
+        let data = google.visualization.arrayToDataTable([
+          ['Product', 'Return'],
+          ['Head & Shoulders',     11],
+          ['Rin',      2],
+          ['Kissan Jam',  2],
+          ['Bru Coffee', 2],
+          ['Comfort Fabric',    7]
+        ]);
+
+        let options = {
+          title: 'Maximum Returned Goods'
+        };
+
+        //console.log(Object.keys(google.visualization))
+        let chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+
+
+
+
+
+    </script>
+  </head>
+
+  <body>
+ <img src="https://image3.mouthshut.com/images/imagesp/925004542s.jpg" height="70px" width="120px" class="img-attri">
+ <p class="header">Welcome to Dashboard!</p>
+  		
+  	</div>
+
+  	    <a href="/validateGoods" id="test"><button class="btn-attributes">Validate Goods</button></a>
+
+  	 <div id="colchart" style="width: 900px; height: 500px;"></div>
+  	 <div id="colchart2" style="width: 900px; height: 500px;"></div>
+    <div id="piechart" style="width: 900px; height: 500px;"></div>
+   
+    <div id="visualization" style="margin: 1em"> </div>
+    <div id="visualization2" style="margin: 1em"> </div>
+
+     <script>
+
+     	//document.write("Returns of Expired Goods");
+
+        window.onload = function () {
+
+            google.load('visualization', '1', { 'packages': ['geochart'] });
+            google.setOnLoadCallback(drawVisualization);
+            google.setOnLoadCallback(drawVisualization2);
+
+            function drawVisualization() {
+                var data = google.visualization.arrayToDataTable([
+                    ['State', 'Expiry Units'],
+                    ['Uttar Pradesh', 1995],
+                    ['Maharashtra', 117],
+                    ['Bihar', 1038],
+                    ['West Bengal', 913],
+                    ['Madhya Pradesh', 725],
+                    ['Tamil Nadu', 2213],
+                    ['Rajasthan', 686],
+                    ['Karnataka', 617],
+                    ['Gujarat', 60],
+                    ['Andhra Pradesh', 493],
+                    ['Odisha', 419],
+                    ['Telangana', 3528],
+                    ['Kerala', 677],
+                    ['Jharkhand', 238],
+                    ['Assam', 311],
+                    ['Punjab', 277],
+                    ['Chhattisgarh', 255],
+                    ['Haryana', 253],
+                    ['Jammu and Kashmir', 125],
+                    ['Uttarakhand', 1011],
+                    ['Himachal Pradesh', 609],
+                    ['Tripura', 3632],
+                    ['Meghalaya', 2967],
+                    ['Manipur', 756],
+                    ['Nagaland', 198],
+                    ['Goa', 145],
+                    ['Arunachal Pradesh', 138],
+                    ['Mizoram', 114],
+                    ['Sikkim', 608],
+                    ['Delhi', 1635],
+                    ['Puducherry', 4464],
+                    ['Chandigarh', 1086],
+                    ['Andaman a˝nd Nicobar Islands', 944],
+                    ['Dadra and Nagar Haveli', 853],
+                    ['Daman and Diu', 242],
+                    ['Lakshadweep', 429]
+                ]);
+
+                //console.log('Region wise Return of Expired Products')
+
+                let opts = {
+                    title: 'Region Wise Return of Expired Products',
+                    region: 'IN',
+                    displayMode: 'regions',
+                    resolution: 'provinces',
+                    width: 800,
+                    height: 600
+                };
+
+                let geochart = new google.visualization.GeoChart(
+                    document.getElementById('visualization')
+                );
+
+                geochart.draw(data, opts);
+            };
+       
+            function drawVisualization2() {
+            	alert('Return');
+                var data = google.visualization.arrayToDataTable([
+                    ['State', 'Damaged Units'],
+                    ['Uttar Pradesh', 477],
+                    ['Maharashtra',972],
+                    ['Bihar', 637],
+                    ['West Bengal', 9136],
+                    ['Madhya Pradesh', 765],
+                    ['Tamil Nadu', 728],
+                    ['Rajasthan', 686],
+                    ['Karnataka', 6704],
+                    ['Gujarat', 603],
+                    ['Andhra Pradesh', 799],
+                    ['Odisha', 358],
+                    ['Telangana', 757],
+                    ['Kerala', 377],
+                    ['Jharkhand', 3238],
+                    ['Assam', 372],
+                    ['Punjab', 236],
+                    ['Chhattisgarh', 2596],
+                    ['Haryana', 891],
+                    ['Jammu and Kashmir', 1256],
+                    ['Uttarakhand', 1015],
+                    ['Himachal Pradesh', 6809],
+                    ['Tripura', 367],
+                    ['Meghalaya', 297],
+                    ['Manipur', 277],
+                    ['Nagaland', 1602],
+                    ['Goa', 143],
+                    ['Arunachal Pradesh', 131],
+                    ['Mizoram', 101],
+                    ['Sikkim', 608],
+                    ['Delhi', 1675],
+                    ['Puducherry', 1264],
+                    ['Chandigarh', 1056],
+                    ['Andaman a˝nd Nicobar Islands', 3744],
+                    ['Dadra and Nagar Haveli', 343],
+                    ['Daman and Diu', 241],
+                    ['Lakshadweep', 649]
+                ]);
+
+                var opts = {
+                    title: 'Region Wise Return of Damaged Products',
+                    region: 'IN',
+                    displayMode: 'regions',
+                    resolution: 'provinces',
+                    width: 800,
+                    height: 600
+                };
+
+                var geochart = new google.visualization.GeoChart(
+                    document.getElementById('visualization2')
+                );
+
+                geochart.draw(data, opts);
+            };
+        }
+    </script>
+  </body>
+</html>
+
+<!-- 
+
+ -->
